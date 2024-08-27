@@ -1,10 +1,17 @@
 const test1 = [1, 2, 3, 4, 5, 6, 7];
 const test2 = [-1, -100, 3, 99];
 
-const arr = test2.splice(test2.length - 4, 4);
+// Time Complexity = O(n)
+function rotateArray(nums, k) {
+  if (k > nums.length) {
+    k = k % nums.length;
+  }
 
-const newArr = [...arr, ...test2];
+  const arr = nums.splice(nums.length - k, k);
+  nums.unshift(...arr);
 
-console.log({ newArr });
+  return nums;
+}
 
-function rotateArray(nums, k) {}
+console.log(rotateArray(test1, 3));
+console.log(rotateArray(test2, 2));

@@ -1,0 +1,7 @@
+Question : Find the second largest number!
+
+Given an array of size n, print the second largest distinct element from an array
+
+Example:
+  Input: [12, 35, 1, 10, 34, 1]   ---->>> Output: 34
+  Input: [10, 5, 10]              ---->>> Output: 5
